@@ -34,7 +34,7 @@ print(datay)
 # plt.show()
 # plt.close()
 # # 生成点与点之间的距离矩阵, 这里用的欧氏距离: euclidean
-# # X：根据什么来聚类，这里结合总体情况 Gross 与平均情况 Avg 两者
+# # X：根据什么来聚类，这里结合总体情况 Profits 与平均情况 Assets 两者
 # disMat = sch.distance.pdist(X=df[['Profits', 'Assets']], metric='euclidean')
 # # 进行层次聚类: 计算距离的方法使用 ward 法
 # Z = sch.linkage(disMat, method='ward')
@@ -42,4 +42,4 @@ print(datay)
 # # 需要手动添加标签。
 # # P = sch.dendrogram(Z, labels=name)
 # P = sch.dendrogram(Z, labels=df.Title.tolist())
-# plt.savefig('层次聚类.png')
+# plt.show()
