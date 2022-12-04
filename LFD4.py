@@ -30,10 +30,10 @@ ax.spines['bottom'].set_position(('data', 0))  # 指定 data  设置的bottom(�
 ax.spines['left'].set_position(('data', 0))
 # 为点添加标签
 for i in range(50):
-  ax.text(datax[i], datay[i], df['Title'].values[i], fontsize=1, color="r", style="italic")
+    ax.text(datax[i], datay[i], df['Title'].values[i], fontsize=1, color="r", style="italic")
 plt.show()
 plt.close()
-生成点与点之间的距离矩阵, 这里用的欧氏距离: euclidean
+#生成点与点之间的距离矩阵, 这里用的欧氏距离: euclidean
 #X：根据什么来聚类，这里结合总体情况 Profits 与平均情况 Assets 两者
 disMat = sch.distance.pdist(X=df[['Profits', 'Assets']], metric='euclidean')
 # 进行层次聚类: 计算距离的方法使用 ward 法
